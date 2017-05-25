@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <package name="zz1265" extends="json-default" namespace="/">
+        <action name="*OracleInfoAction" class="action.oracle.OracleInfoAction" method="{1}">
+            <result name="oracleMain">/oracle/oracleMain.jsp</result>
+        </action>
+        <action name="*OracleSqlAction" class="action.oracle.OracleSqlAction" method="{1}">
+            <result name="showResult">/oracle/showResult.jsp</result>
+            <result name="showMessage">/oracle/showMessage.jsp</result>
+        </action>
+        <action name="*OracleAjaxAction" class="action.oracle.OracleAjaxAction" method="{1}">
+            <result name="updated" type="json">
+                <param name="root"></param>
+            </result>
+            <result name="insert" type="redirect">executeSqlOracleSqlAction.action?table=${theTable}</result>
+        </action>
+    </package>
+</struts>

@@ -1,0 +1,19 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="myoracle:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/myoracle_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="myoracle/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="myoracle" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Struts 2" />
+          <element id="file-copy" path="E:/Library/javaJar/ojdbc6.jar" />
+          <element id="file-copy" path="E:/Library/javaJar/jstl.jar" />
+          <element id="file-copy" path="E:/Library/javaJar/standard.jar" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
